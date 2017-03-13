@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="game" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Win32 Release">
+				<Option output="../output/gamex86" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../obj/release/$(PROJECT_NAME)" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-W" />
+					<Add option="-fexceptions" />
+					<Add option="-mcpu=pentium -D_M_IX86=500" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_WINDOWS" />
+					<Add option="-DC_ONLY" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static" />
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+					<Add library="winmm" />
+				</Linker>
+			</Target>
+			<Target title="Win32 Debug">
+				<Option output="../output/gamex86_d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../obj/debug/$(PROJECT_NAME)" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-W" />
+					<Add option="-fexceptions" />
+					<Add option="-mcpu=pentium -D_M_IX86=500" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_WINDOWS" />
+					<Add option="-DBUILDING_REF_GL" />
+					<Add option="-DC_ONLY" />
+				</Compiler>
+				<Linker>
+					<Add option="-static" />
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+					<Add library="winmm" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="g_ai.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_chase.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_cmds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_combat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_func.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_items.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_local.h" />
+		<Unit filename="g_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_monster.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_phys.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_save.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_spawn.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_svcmds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_target.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_trigger.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_turret.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_utils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="g_weapon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="game.def" />
+		<Unit filename="game.h" />
+		<Unit filename="m_actor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_actor.h" />
+		<Unit filename="m_berserk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_berserk.h" />
+		<Unit filename="m_boss2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_boss2.h" />
+		<Unit filename="m_boss3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_boss31.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_boss31.h" />
+		<Unit filename="m_boss32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_boss32.h" />
+		<Unit filename="m_brain.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_brain.h" />
+		<Unit filename="m_chick.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_chick.h" />
+		<Unit filename="m_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_flipper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_flipper.h" />
+		<Unit filename="m_float.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_float.h" />
+		<Unit filename="m_flyer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_flyer.h" />
+		<Unit filename="m_gladiator.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_gladiator.h" />
+		<Unit filename="m_gunner.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_gunner.h" />
+		<Unit filename="m_hover.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_hover.h" />
+		<Unit filename="m_infantry.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_infantry.h" />
+		<Unit filename="m_insane.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_insane.h" />
+		<Unit filename="m_medic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_medic.h" />
+		<Unit filename="m_move.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_mutant.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_mutant.h" />
+		<Unit filename="m_parasite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_parasite.h" />
+		<Unit filename="m_player.h" />
+		<Unit filename="m_soldier.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_soldier.h" />
+		<Unit filename="m_supertank.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_supertank.h" />
+		<Unit filename="m_tank.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="m_tank.h" />
+		<Unit filename="p_client.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="p_hud.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="p_trail.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="p_view.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="p_weapon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="q_shared.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="q_shared.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

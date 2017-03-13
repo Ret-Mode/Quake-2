@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="ctf/ctf.cbp" />
+		<Project filename="game/game.cbp" />
+		<Project filename="quake2.cbp" />
+		<Project filename="ref_gl/ref_gl.cbp" />
+		<Project filename="ref_soft/ref_soft.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>
