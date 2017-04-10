@@ -476,11 +476,23 @@ void *Sys_GetGameAPI (void *parms)
 	char	*path;
 	char	cwd[MAX_OSPATH];
 #if defined _M_IX86
+
+#ifdef __MINGW32__
+#ifdef NDEBUG
+	const char *gamename = "gamex86_mingw.dll";
+#else
+	const char *gamename = "gamex86_mingw_d.dll";
+#endif
+#else
 #ifdef NDEBUG
 	const char *gamename = "gamex86.dll";
 #else
 	const char *gamename = "gamex86_d.dll";
 #endif
+#endif
+
+
+
 #ifdef NDEBUG
 	const char *debugdir = "release";
 #else

@@ -112,7 +112,7 @@ DLL GLUE
 ==========================================================================
 */
 
-#define	MAXPRINTMSG	4096
+#define	MAXPRINTMSG	16384
 void VID_Printf (int print_level, char *fmt, ...)
 {
 	va_list		argptr;
@@ -668,10 +668,24 @@ void VID_CheckChanges (void)
 		vid_fullscreen->modified = true;
 		cl.refresh_prepped = false;
 		cls.disable_screen = true;
+
+		#ifdef __MINGW32__
+
+		#ifdef NDEBUG
+		Com_sprintf( name, sizeof(name), "ref_%s_mingw.dll", vid_ref->string );
+		#else
+		Com_sprintf( name, sizeof(name), "ref_%s_mingw_d.dll", vid_ref->string );
+		#endif
+
+
+		#else
+
 		#ifdef NDEBUG
 		Com_sprintf( name, sizeof(name), "ref_%s.dll", vid_ref->string );
 		#else
 		Com_sprintf( name, sizeof(name), "ref_%s_d.dll", vid_ref->string );
+		#endif
+
 		#endif
 		if ( !VID_LoadRefresh( name ) )
 		{
