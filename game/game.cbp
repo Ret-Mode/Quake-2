@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Win32 Release">
-				<Option output="../output/gamex86" prefix_auto="1" extension_auto="1" />
+				<Option output="$(Q2DEST)/baseq2/gamex86_mingw" prefix_auto="1" extension_auto="1" />
 				<Option object_output="../obj/release/$(PROJECT_NAME)" />
 				<Option type="3" />
 				<Option compiler="gcc" />
@@ -42,7 +42,7 @@
 				</Linker>
 			</Target>
 			<Target title="Win32 Debug">
-				<Option output="../output/gamex86_d" prefix_auto="1" extension_auto="1" />
+				<Option output="$(Q2DEST)/baseq2/gamex86_mingw_d" prefix_auto="1" extension_auto="1" />
 				<Option object_output="../obj/debug/$(PROJECT_NAME)" />
 				<Option type="3" />
 				<Option compiler="gcc" />
@@ -75,6 +75,9 @@
 					<Add library="winmm" />
 				</Linker>
 			</Target>
+			<Environment>
+				<Variable name="Q2DEST" value=".\output" />
+			</Environment>
 		</Build>
 		<Unit filename="g_ai.c">
 			<Option compilerVar="CC" />
